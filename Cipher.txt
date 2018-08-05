@@ -1,0 +1,25 @@
+[Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") | Out-Null
+[System.Windows.Forms.Application]::EnableVisualStyles()
+$fd = New-Object system.windows.forms.FolderBrowserDialog
+$fd.Description="Choose a folder"
+$fd.RootFolder=[System.Environment+SpecialFolder]'MyComputer'
+$fd.ShowNewFolderButton=$false
+$loop = $true
+    while($loop)
+    {
+        if ($fd.showdialog() -eq "OK")
+        {
+            $loop = $false
+           $deleteFol= $fd.SelectedPath
+          write-host  $deleteFol
+          cipher.exe /w:$deleteFol 
+        } else
+        {
+            $res = [System.Windows.Forms.MessageBox]::Show("You clicked Cancel. Try again or exit script?", "Choose a directory", [System.Windows.Forms.MessageBoxButtons]::RetryCancel)
+            if($res -eq "Cancel")
+            {
+                return
+            }
+        }
+    }
+    $fd.Dispose()

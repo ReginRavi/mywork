@@ -1,6 +1,6 @@
 [System.Diagnostics.Process]::start("chrome.exe","https://social.technet.microsoft.com/forums/en-us/home?category=ConfigMgrCB&filter=alltypes&sort=lastpostdesc")
 [System.Diagnostics.Process]::start("chrome.exe","https://social.technet.microsoft.com/forums/en-us/home?category=systemcenter2012configurationmanager&filter=alltypes&sort=lastpostdesc")
-[System.Diagnostics.Process]::start("chrome.exe","https://www.yammer.com/unisys.com#/home")
+#[System.Diagnostics.Process]::start("chrome.exe","https://www.yammer.com/unisys.com#/home")
 [System.Diagnostics.Process]::start("chrome.exe","https://social.technet.microsoft.com/forums/en-us/home?category=windowsazureplatform%2Csqlserverdataservices&forum=ssdsgetstarted%2Chypervrecovmgr&filter=alltypes&sort=lastpostdesc")
 [System.diagnostics.process]::start("chrome.exe","https://twitter.com/search?q=%20%23ConfigMgr%20&src=savs")
 [System.Diagnostics.Process]::start("chrome.exe","https://twitter.com/search?q=%20%23powershell&src=savs")
